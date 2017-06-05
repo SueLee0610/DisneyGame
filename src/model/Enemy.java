@@ -21,8 +21,6 @@ public abstract class Enemy extends Character {
 		if((player.chPos.getxPos()-this.position.getxPos())>player.existRange || (this.xPos-player.xPos)>player.existRange) return false;
 		else return true;
 	}
-	
-	//hello
 
 	@Override
 	public void hurt(int dec_hp) {
