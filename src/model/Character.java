@@ -1,7 +1,7 @@
 package model;
 
 public abstract class Character implements Fightable, Recoverable, Moveable {
-	Position ChPos;
+	Position chPos;
 	protected int hp;
 	protected boolean last_stage;
 	protected int existRange;
@@ -9,10 +9,10 @@ public abstract class Character implements Fightable, Recoverable, Moveable {
 	
 	public void move(int a) {	//a값이 1이면 오른쪽으로, 2면 왼쪽으로 
 		switch(a) {
-		case 1 : this.ChPos.go(); break;
-		case 2 : this.ChPos.back(); break;
-		case 3 : if(last_stage) this.ChPos.up(); break;
-		case 4 : if(last_stage) this.ChPos.down(); break;
+		case 1 : this.chPos.go(); break;
+		case 2 : this.chPos.back(); break;
+		case 3 : if(last_stage) this.chPos.up(); break;
+		case 4 : if(last_stage) this.chPos.down(); break;
 		default : break;
 		}
 	}

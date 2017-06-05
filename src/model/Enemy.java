@@ -2,6 +2,7 @@ package model;
 
 public abstract class Enemy extends Character {
 	protected int power;
+	private Position position;
 	
 	@Override
 	public void recover() {
@@ -17,7 +18,7 @@ public abstract class Enemy extends Character {
 	}
 	
 	private boolean isPlayerExist(Character player) {//player범위 내에 enemy가 있으면 true리턴, 없으면 false리턴 
-		if((player.xPos-this.xPos)>player.existRange || (this.xPos-player.xPos)>player.existRange) return false;
+		if((player.chPos.getxPos()-this.position.getxPos())>player.existRange || (this.xPos-player.xPos)>player.existRange) return false;
 		else return true;
 	}
 
